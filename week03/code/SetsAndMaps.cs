@@ -140,20 +140,21 @@ public static class SetsAndMaps
 
         return summaries.ToArray();
     }
-}
 
-public class FeatureCollection
-{
-    public List<Feature> Features { get; set; }
-}
+   
+    private class FeatureCollection
+    {
+        public List<Feature> Features { get; set; }
+    }
 
-public class Feature
-{
-    public EarthquakeProperties Properties { get; set; }
-}
+    private class Feature
+    {
+        public EarthquakeProperties Properties { get; set; }
+    }
 
-public class EarthquakeProperties
-{
-    public string Place { get; set; }
-    public double? Mag { get; set; }
+    private class EarthquakeProperties
+    {
+        public string Place { get; set; }
+        public double? Mag { get; set; }
+    }
 }
