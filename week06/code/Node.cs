@@ -10,26 +10,30 @@ public class Node
     }
 
     public void Insert(int value)
+{
+   
+    if (value == Data)
     {
-        // TODO Start Problem 1
-
-        if (value < Data)
-        {
-            // Insert to the left
-            if (Left is null)
-                Left = new Node(value);
-            else
-                Left.Insert(value);
-        }
-        else
-        {
-            // Insert to the right
-            if (Right is null)
-                Right = new Node(value);
-            else
-                Right.Insert(value);
-        }
+        return;
     }
+
+    if (value < Data)
+    {
+     
+        if (Left is null)
+            Left = new Node(value);
+        else
+            Left.Insert(value);
+    }
+    else if (value > Data)
+    {
+      
+        if (Right is null)
+            Right = new Node(value);
+        else
+            Right.Insert(value);
+    }
+}
 
     public bool Contains(int value)
     {
